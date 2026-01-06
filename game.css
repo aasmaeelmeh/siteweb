@@ -1,0 +1,136 @@
+.game{
+    width: 255px;
+    text-align: center;
+    font-family: system-ui;
+    color: white;
+    margin: auto;
+   font-weight: 500; 
+}
+.title{
+    background: rgb(236, 95, 95);
+    padding: 5px 0;
+    margin: 5px 0;
+}
+span{
+    color: brown;
+}
+.square{
+    width: 80px;
+    height: 80px;
+    background: rgb(236, 95, 95);
+    float: left;
+    margin: 2px;
+    font-size: 50px;  
+}
+.square:hover{
+    background: violet;
+    cursor: pointer;
+}
+body{
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game{
+    width: 255px;
+    text-align: center;
+    font-family: system-ui;
+    color: white;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:scale(0.9);}
+    to{opacity:1; transform:scale(1);}
+}
+
+.title{
+    background: rgb(236, 95, 95);
+    padding: 8px 0;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.title span{
+    color: brown;
+    font-weight: bold;
+}
+
+.square{
+    width: 80px;
+    height: 80px;
+    background: rgb(236, 95, 95);
+    float: left;
+    margin: 2px;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.square:hover{
+    background: violet;
+}
+
+.square:active{
+    transform: scale(0.85);
+}
+
+.square.x{
+    color: #2c6bff;
+    animation: pop 0.3s ease;
+}
+
+.square.o{
+    color: #00ff9d;
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop{
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+
+.win{
+    background: gold !important;
+    animation: winFlash 0.6s infinite alternate;
+}
+
+@keyframes winFlash{
+    from{box-shadow: 0 0 5px gold;}
+    to{box-shadow: 0 0 20px orange;}
+}
+
+#restartBtn{
+    margin-top: 25px;
+    padding: 10px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(135deg,#ff9800,#ff5722);
+    color: white;
+    transition: 0.3s;
+}
+
+#restartBtn:hover{
+    transform: scale(1.1);
+}
+.win {
+    background-color: gold !important;
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7);
+    color: black;
+    font-weight: bold;
+}
+
+
